@@ -8,20 +8,26 @@
 class SamplePlugin extends Yaf_Plugin_Abstract {
 
 	public function routerStartup(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		var_dump($response->getBody());
 	}
 
 	public function routerShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		var_dump($response->getBody());
 	}
 
 	public function dispatchLoopStartup(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		var_dump($response->getBody());
 	}
 
 	public function preDispatch(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		var_dump($response->getBody());
 	}
 
 	public function postDispatch(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		var_dump($response->getBody());
 	}
 
 	public function dispatchLoopShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		var_dump($response->getBody());
 	}
 }
