@@ -5,3 +5,5 @@
  * Date: 12/6/15
  * Time: 2:18 PM
  */
+
+//ini_set('yaf.library', 'global');
