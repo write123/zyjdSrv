@@ -17,9 +17,11 @@ class SamplePlugin extends Yaf_Plugin_Abstract {
 	}
 
 	public function preDispatch(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		echo 'preDispatch';
 	}
 
 	public function postDispatch(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		echo 'postDispatch';
 	}
 
 	public function dispatchLoopShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {

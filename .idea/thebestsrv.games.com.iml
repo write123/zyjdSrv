@@ -7,10 +7,10 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../php-yaf-doc" />
+          <root url="file://$USER_HOME$/Downloads/php-yaf-doc" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/../php-yaf-doc" />
+          <root url="file://$USER_HOME$/Downloads/php-yaf-doc" />
         </SOURCES>
       </library>
     </orderEntry>
