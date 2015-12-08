@@ -5,25 +5,29 @@
  * @see http://www.php.net/manual/en/class.yaf-plugin-abstract.php
  * @author gw
  */
-class SamplePlugin extends Yaf_Plugin_Abstract {
+class SystemPlugin extends Yaf_Plugin_Abstract {
 
 	public function routerStartup(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		//echo "routerStartup</br>";
 	}
 
 	public function routerShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		//echo "routerShutdown</br>";
 	}
 
 	public function dispatchLoopStartup(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		//echo 'dispatchLoopStartup</br>';
 	}
 
 	public function preDispatch(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
-		echo 'preDispatch';
+		//echo 'preDispatch</br>';
 	}
 
 	public function postDispatch(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
-		echo 'postDispatch';
+		//echo 'postDispatch</br>';
 	}
 
 	public function dispatchLoopShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+		Response_Json::get()->send();
 	}
 }

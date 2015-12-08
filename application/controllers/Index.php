@@ -9,9 +9,9 @@
 class IndexController extends BaseController{
 
 	/**
-	 *
 	 * @param string $name
 	 * @param int $age
+	 * @return bool
 	 */
 	public function indexAction(string $name, int $age) {
 //		//1. fetch query
@@ -28,12 +28,13 @@ class IndexController extends BaseController{
 //
 //		foo\config::get()->load();
 
-		$ret['name'] = $name;
-		$ret['age']  = $age;
+		$ret['user']['name'] = $name;
+		$ret['user']['age']  = $age;
 
-		new Stream_Response();
-		new Yaf_Response_Http();
+		//echo "indexAction</br>";
 
-		return $this->output($ret);
+		Response_Json::get()->addBody($ret);
+
+		return false;
 	}
 }
