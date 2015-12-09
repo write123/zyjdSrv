@@ -27,7 +27,7 @@ class Response_Json
 
     public function addBody(array $info) : bool
     {
-        $this->body = $info;
+        $this->body += $info;
 
         return true;
     }
