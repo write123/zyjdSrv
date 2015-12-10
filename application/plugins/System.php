@@ -14,15 +14,26 @@ class SystemPlugin extends Yaf_Plugin_Abstract {
 
 	public function routerShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
 
-		$router = Yaf_Dispatcher::getInstance()->getRouter();
-		//echo $router->getCurrentRoute();
-		var_dump($router);
-		//echo "routerShutdown</br>";
+		if(!$ctl = Tools::getReqParam('ctl'))
+			throw new Yaf_Exception_RouterFailed();
+
+		if(!$act = Tools::getReqParam('act'))
+			throw new Yaf_Exception_RouterFailed();
+
+		$params = Tools::getReqParam('p');
+
+		if(is_string($params))
+			$params = json_decode($params, true);
+
+		if(is_null($params) || !is_array($params))
+			$params = array();
+
+		Yaf_Dispatcher::getInstance()->setRequest(new Yaf_Request_Simple('Index', 'Index', $ctl, $act, $params));
 	}
 
 	public function dispatchLoopStartup(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
 
-		var_dump($request);
+		//var_dump($request);
 		//echo 'dispatchLoopStartup</br>';
 	}
 
@@ -35,9 +46,6 @@ class SystemPlugin extends Yaf_Plugin_Abstract {
 	}
 
 	public function dispatchLoopShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
-		//Response_Json::get()->send();
-		var_dump($request);
-
-		exit;
+		Response_Json::get()->send();
 	}
 }

@@ -31,13 +31,13 @@ class IndexController extends Yaf_Controller_Abstract{
 //
 //		foo\config::get()->load();
 
-		//$ret['user']['name'] = $name;
-		//$ret['user']['age']  = $age;
+		$ret['user']['name'] = 'sdfsd';
+		$ret['user']['age']  = 20;
 
 		//echo "indexAction</br>";
 
-		//Response_Json::get()->addBody($ret);
+		$this->_view->assign($ret);
 
-		return false;
+		return true;
 	}
 }

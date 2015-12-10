@@ -7,20 +7,13 @@
  * Time: 11:13 PM
  */
 
-class itemAction extends Yaf_Action_Abstract
+class itemAction extends baseAction
 {
-    public function execute()
+    public function init(string $name, int $age)
     {
+        $ret['name'] = $name;
+        $ret['age'] = $age;
 
-//        $ret['item']['configId'] = 123;
-//        $ret['item']['name']  = 'sancha';
-//        $ret['request'] = $this->getRequest()->getParams();
-//
-//        Response_Json::get()->addBody($ret);
-        //var_dump($this->getRequest()->getParams());
-
-
-        //exit;
-        return false;
+        return $ret;
     }
 }
