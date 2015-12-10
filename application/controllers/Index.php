@@ -6,7 +6,11 @@
  * @see http://www.php.net/manual/en/class.yaf-controller-abstract.php
  */
 
-class IndexController extends BaseController{
+class IndexController extends Yaf_Controller_Abstract{
+
+	public $actions = array(
+		'item' => 'controllers/actions/item.php'
+	);
 
 	public $actions = array(
 		'item' => 'controllers/actions/item.php'

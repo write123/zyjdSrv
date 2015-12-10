@@ -9,7 +9,6 @@
  */
 class Bootstrap extends Yaf_Bootstrap_Abstract{
 
-	/** @var Yaf_Config_Abstract $config */
 	private $config;
 
     public function _initConfig() {
@@ -28,4 +27,5 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		//在这里注册自己的路由协议,默认使用简单路由
 		$dispatcher->getRouter()->addConfig($this->config->routes);
 	}
+
 }
