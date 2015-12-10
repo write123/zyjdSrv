@@ -14,6 +14,6 @@ class ErrorController extends Yaf_Controller_Abstract {
 		var_dump($exception);
 		exit;
 		$this->getView()->assign("exception", $exception);
-		//5. render by Yaf 
+		//5. render by Yaf
 	}
 }

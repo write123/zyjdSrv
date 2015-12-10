@@ -13,11 +13,10 @@ class IndexController extends Yaf_Controller_Abstract{
 	);
 
 	/**
-	 * @param string $name
-	 * @param int $age
 	 * @return bool
 	 */
-	public function indexAction(string $name, int $age) {
+	public function indexAction() {
+
 //		//1. fetch query
 		//GameLibrary::get()->setName($name);
 //
@@ -32,12 +31,12 @@ class IndexController extends Yaf_Controller_Abstract{
 //
 //		foo\config::get()->load();
 
-		$ret['user']['name'] = $name;
-		$ret['user']['age']  = $age;
+		//$ret['user']['name'] = $name;
+		//$ret['user']['age']  = $age;
 
 		//echo "indexAction</br>";
 
-		Response_Json::get()->addBody($ret);
+		//Response_Json::get()->addBody($ret);
 
 		return false;
 	}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: gw
@@ -10,12 +11,14 @@ class itemAction extends Yaf_Action_Abstract
 {
     public function execute()
     {
+
 //        $ret['item']['configId'] = 123;
 //        $ret['item']['name']  = 'sancha';
 //        $ret['request'] = $this->getRequest()->getParams();
 //
 //        Response_Json::get()->addBody($ret);
         //var_dump($this->getRequest()->getParams());
+
 
         //exit;
         return false;
