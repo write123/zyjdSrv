@@ -10,7 +10,17 @@ class ErrorController extends Yaf_Controller_Abstract {
 	//从2.1开始, errorAction支持直接通过参数获取异常
 	public function errorAction($exception) {
 		//1. assign to view engine
-		$this->getView()->assign("exception", $exception);
-		//5. render by Yaf 
+		//$this->getView()->assign("exception", $exception);
+
+
+		$error['errno'] = $exception->getCode();
+		$error['msg'] = $exception->getMessage();
+
+		var_dump($exception);
+
+		Response_Json::get()->addBody($error);
+		//5. render by Yaf
+
+		return false;
 	}
 }

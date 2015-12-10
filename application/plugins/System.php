@@ -16,6 +16,8 @@ class SystemPlugin extends Yaf_Plugin_Abstract {
 	}
 
 	public function dispatchLoopStartup(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+
+		var_dump($request);
 		//echo 'dispatchLoopStartup</br>';
 	}
 
