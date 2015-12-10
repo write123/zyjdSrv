@@ -12,10 +12,6 @@ class IndexController extends Yaf_Controller_Abstract{
 		'item' => 'controllers/actions/item.php'
 	);
 
-	public $actions = array(
-		'item' => 'controllers/actions/item.php'
-	);
-
 	/**
 	 * @return bool
 	 */
