@@ -8,10 +8,15 @@
 class SystemPlugin extends Yaf_Plugin_Abstract {
 
 	public function routerStartup(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+
 		//echo "routerStartup</br>";
 	}
 
 	public function routerShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
+
+		$router = Yaf_Dispatcher::getInstance()->getRouter();
+		//echo $router->getCurrentRoute();
+		var_dump($router);
 		//echo "routerShutdown</br>";
 	}
 
@@ -28,6 +33,9 @@ class SystemPlugin extends Yaf_Plugin_Abstract {
 	}
 
 	public function dispatchLoopShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
-		Response_Json::get()->send();
+		//Response_Json::get()->send();
+		var_dump($request);
+
+		exit;
 	}
 }
