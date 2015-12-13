@@ -7,7 +7,7 @@
  * Time: 11:13 PM
  */
 
-class itemAction extends baseAction
+class itemAction extends Amie_Action_Base
 {
     public function init(string $name, int $age)
     {

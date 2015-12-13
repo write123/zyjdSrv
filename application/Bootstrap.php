@@ -17,6 +17,11 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 		Yaf_Registry::set('config', $this->config);
 	}
 
+	public function _initLoader(Yaf_Dispatcher $dispatcher)
+	{
+		Yaf_Loader::getInstance()->registerLocalNamespace('Common');
+	}
+
 	public function _initPlugin(Yaf_Dispatcher $dispatcher) {
 		//注册一个插件
 		$systemPlugin = new SystemPlugin();
@@ -30,6 +35,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 
 	public function _initView(Yaf_Dispatcher $dispatcher)
 	{
-		//$dispatcher->disableView();
+		$dispatcher->disableView();
 	}
 }

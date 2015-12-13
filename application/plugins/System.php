@@ -46,6 +46,7 @@ class SystemPlugin extends Yaf_Plugin_Abstract {
 	}
 
 	public function dispatchLoopShutdown(Yaf_Request_Abstract $request, Yaf_Response_Abstract $response) {
-		Response_Json::get()->send();
+		//Response_Json::get()->send();
+		Response::get()->render();
 	}
 }

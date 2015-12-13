@@ -12,9 +12,6 @@ class IndexController extends Yaf_Controller_Abstract{
 		'item' => 'controllers/actions/item.php'
 	);
 
-	/**
-	 * @return bool
-	 */
 	public function indexAction() {
 
 //		//1. fetch query
@@ -36,8 +33,6 @@ class IndexController extends Yaf_Controller_Abstract{
 
 		//echo "indexAction</br>";
 
-		$this->_view->assign($ret);
-
-		return true;
+		Response::get()->setBody($this->_view->render('index/index.phtml', $ret))->toHtml();
 	}
 }
